@@ -11,11 +11,15 @@
     <script src="./js/browser.min.js"></script>
     <script type="text/babel">
       var HelloWorld = React.createClass({
+        handleClick: function() {
+          alert("Hey" + this.props.children);
+        },
         render: function() {
           return (
             <div>
               <h1>Hello {this.props.name}</h1>
               <p>{this.props.children}</p>
+              <a href="#" onClick={this.handleClick}>Click Me</a>
             </div>
           );
         }
