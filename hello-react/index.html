@@ -13,16 +13,19 @@
       var HelloWorld = React.createClass({
         render: function() {
           return (
-            <h1>Hello {this.props.name}</h1>
+            <div>
+              <h1>Hello {this.props.name}</h1>
+              <p>{this.props.children}</p>
+            </div>
           );
         }
       });
 
       ReactDOM.render(
             <div>
-              <HelloWorld name="Echo"/>
-              <HelloWorld name="Yuhuayang"/>
-              <HelloWorld name="Zhangmeng"/>
+              <HelloWorld name="Echo"> Nice to meet you! </HelloWorld>
+              <HelloWorld name="Yuhuayang"> How are you </HelloWorld>
+              <HelloWorld name="Zhangmeng"> I am fine thanks </HelloWorld>
             </div>,
         document.getElementById('container'));
     </script>
